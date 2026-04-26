@@ -28,3 +28,13 @@ def start():
     )
     logger.info(f"Scheduler started — report runs daily at {REPORT_HOUR:02d}:{REPORT_MINUTE:02d} UTC.")
     scheduler.start()
+
+
+import logging
+
+if __name__ == "__main__":
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s | %(levelname)s | %(name)s | %(message)s"
+    )
+    run_report()
